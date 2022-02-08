@@ -67,6 +67,7 @@ const submitForm = async () => {
 		} else
 		if (response.status === 200){
 			alert("Cadastro realizado com sucesso!");
+		}
 	})
 	.then((body) => {
 		if (body !== null && body !== undefined){
