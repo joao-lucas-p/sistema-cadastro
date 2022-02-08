@@ -16,7 +16,6 @@ input, label {
 
 body {
   padding-top: 5vh;
-  /* background-image: url('../img/bg-register-page.jpg'); */
   background-size: cover;
   background-position-y: -150px;
 }
@@ -61,11 +60,11 @@ input {
 }
 
 input:focus {
-  border-color: #fe5f73;
+  border-color: #5ffe79;
 }
 
 input[type="button"] {
-  background-color: #fe5f73;
+  background-color: #45664a;
   color: #FFF;
   border: none;
   border-radius: 20px;
