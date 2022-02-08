@@ -12,7 +12,7 @@ const [invalidForm, setInvalidForm] = useState(true);
 const [inputValidation, setinputValidation] = useState({});
 const [inputValues, setinputValues] = useState({});
 
-const baseUrl = "http://localhost:8080"
+const baseUrl = "Insira o endereço da sua API/Servidor aqui."
 
 
 const handleFieldsValidation =  (id, isValid) => {
@@ -54,7 +54,7 @@ const submitForm = async () => {
 	let myHeaders = new Headers();
 	myHeaders.append("Content-Type", "application/json");
 
-	await fetch(baseUrl + "/clientes", {  
+	await fetch(baseUrl + "/SEUENDEREÇO", { 
 	method: 'POST',
 	headers: myHeaders,
 	body: JSON.stringify(inputValues),
@@ -64,7 +64,9 @@ const submitForm = async () => {
 	.then(response =>{
 		if (response.status === 400 || response.status === 409){
 			return response.text();
-		}
+		} else
+		if (response.status === 200){
+			alert("Cadastro realizado com sucesso!");
 	})
 	.then((body) => {
 		if (body !== null && body !== undefined){
